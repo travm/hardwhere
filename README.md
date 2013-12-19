@@ -1,4 +1,12 @@
 hardwhere
 =========
 
-Hack Day #1 - API
+Hack Day #2 - Website
+
+Stack:
+- SQL Server
+- ASP.NET
+- AngularJS
+- Myth
+- GulpJS
+- Azure
