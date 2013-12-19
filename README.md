@@ -3,7 +3,7 @@ hardwhere
 
 Hack Day #2 - Website
 
-##Stack:
+## Stack
 - SQL Server
 - ASP.NET
 - AngularJS
