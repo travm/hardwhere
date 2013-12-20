@@ -6,7 +6,7 @@
         
         <div class="block">
             
-            <h2 class="block-title"><i class="fa fa-desktop"></i> Assets</h2>
+            <h2 class="block-title"><i class="fa fa-plus-circle"></i> Add An Asset</h2>
 
             <ul class="block-list">
                 <li>
@@ -56,7 +56,23 @@
 
         <div class="block">
             
-            <h2 class="block-title"><i class="fa fa-clock-o"></i> Latest</h2>
+            <h2 class="block-title"><i class="fa fa-list-alt"></i> Asset List</h2>
+            
+
+            <table class="block-table">
+                <tr ng-repeat="asset in assets">
+                    <td>{{ asset.Name }}</td>
+                    <td>{{ asset.Description }}</td>
+                    <td>{{ asset.SerialNumber }}</td>
+                    <td>{{ asset.Location }}</td>
+                    <td>
+                        <a href="#" ng-click="editAsset()">Edit</a>
+                        <a href="#" ng-click="deleteAsset()">Delete</a>
+                    </td>
+                </tr>
+            </table>
+
+            
 
         </div>
 
