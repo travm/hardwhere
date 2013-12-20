@@ -1,16 +1,18 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="hardwhere">
 
     <head>
-        <title></title>
+        <title>Hardwhere</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
+        <meta name="description" content="Location based inventory for computer hardware." />
+        <meta name="keywords" content="computer, hardware, inventory" />
         <meta name="robots" content="index, follow" />
         <link rel="shortcut icon" href="">
-        <link rel="stylesheet" href="" />
-        <link rel="stylesheet" href="" />
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="lib/css/normalize.css" />
+        <link rel="stylesheet" href="app/assets/css/main-prod.css" />
         
         <!-- HTML5 Element Fix -->
         <!--[if lt IE 9]>
@@ -30,9 +32,40 @@
         <![endif]-->
     </head>
 
-    <body>
+    <body class="image-cover">
 
+        <header id="header">
+          <div id="header-content" class="measure">
+            <div id="header-logo">
+              <h1><a href="#/">Hard <i class="fa fa-map-marker"></i> Where</a></h1>
+            </div>
+            <!-- <ul id="header-links">
+              <li><a href="#/login">Login</a></li>
+            </ul> -->
+            <ul id="header-login">
+              <li><input type="text" placeholder="Username"></li>
+              <li><input type="password" placeholder="Password"></li>
+              <li><button class="button">Login</button></li>
+            </ul>
+          </div>
+        </header>
         
+        <ng-view ng-animate="'slide'"></ng-view>
+      
+       <!--  <div id="footer">
+            
+            <div id="footer-content" class="measure">
+                
+                <p>This is our footer. Ha-</p>
+
+            </div>
+      
+        </div> -->
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-animate.js"></script>
+        <script type="text/javascript" src="app/app.js"></script>
 
     </body>
 

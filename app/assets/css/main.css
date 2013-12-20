@@ -1,0 +1,165 @@
+/********/
+/* BASE */
+/********/
+:root {
+    var-blue: #00B4FF;
+}
+
+body {font:300 16px 'Lato', Helvetica, Arial, Sans-Serif; background:#eee;}
+
+.image-cover {
+    background: url(../img/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.measure {width:90%; margin:0 auto;}
+
+input {width:100%; padding:.5em; border:1px solid #eee; border-radius:3px; box-sizing:border-box;}
+
+/**********/
+/* LAYOUT */
+/**********/
+
+#header {color:#fff; padding:0; background:#222; overflow:hidden;}
+#header-content {padding:1em; overflow:hidden;}
+#header-logo {width:100%; text-align:center;}
+#header-logo i {color:var(blue);}
+#header-logo h1 a {color:#fff; text-decoration:none;}
+#header-links {list-style:none; margin:2em 0; padding:0;}
+#header-links li {margin:0 1em; display:inline-block;}
+#header-links li a {color:#fff; text-decoration:none;}
+#header-login {text-align:center; width:100%; list-style:none; margin:1em 0; padding:0;}
+#header-login input { margin:0 0 1em 0;}
+#header-login button { padding:.5em;}
+
+/* Index Card */
+#intro-card {
+    /*background:#00B4FF;*/
+    overflow:hidden;
+}
+#intro-card-content {color:#fff; text-align:center; padding:5em 0;}
+#intro-card-content h1 {font-size:2.5em; text-shadow:2px 2px 0px rgba(0, 0, 0, 0.5);}
+#intro-card-buttons {list-style:none; margin:0; padding:0;}
+#intro-card-buttons li {margin:0 .5em; display:inline-block;}
+#intro-card-buttons li a {padding:1em;}
+
+#core {}
+#core-content {margin:2em auto; overflow:hidden;}
+
+#footer {color:#fff; background:#222; overflow:hidden;}
+#footer-content {}
+
+/***********/
+/* MODULES */
+/***********/
+
+/* Box */
+.box {padding:4em; background:#fff; border-radius:5px;}
+
+/* Section Block */
+.block {margin:0 0 2em 0;}
+.block-title {font-size:1em; margin:0 0 2em 0; padding:.5em 0; border-bottom:1px solid #333;}
+.block-list {text-align:center; list-style:none; margin:0; padding:0;}
+.block-list li {display:inline-block;}
+.block-list li  a {color:#333; text-decoration:none;}
+
+/* Item Card */
+.item-card {color:#fff; text-align:center; text-shadow:1px 1px 1px rgba(0,0,0,0.5); margin:1em;padding:1em; background:var(blue); border-radius:5px;  display:block;}
+.item-card-icon {font-size:5em; width:100%; display:block;}
+.item-card-text {width:100%;}
+
+/* Item List */
+.item-list {}
+
+/* Form */
+.form-block {width:50%; margin:0 auto;}
+.form-block input {}
+.form-block button {}
+
+/* Button */
+.button {
+    color:#fff; 
+    text-decoration:none; 
+    padding:1em; 
+    background:var(blue);
+    box-shadow:0px 3px 0px color(var(blue) shade(20%));
+    border:none;
+    border-radius:5px;
+    display:block; 
+}
+.button:hover {
+    background:color(var(blue) tint(20%));
+    box-shadow:0px 3px 0px color(var(blue) shade(20%));
+}
+
+/*****************/
+/* NG ANIMATIONS */
+/*****************/
+
+.slide.ng-enter, .slide.ng-enter, {
+    transition: all linear 0.2s;
+}
+
+.slide.ng-enter {opacity:0;}
+.slide.ng-enter-active {opacity:1;}
+.slide.ng-leave {opacity:1;}
+.slide.ng-leave-active {opacity:0;}
+
+
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
+
+@media screen and (min-width:600px) {
+
+    .measure {width:70%;}
+
+    /**********/
+    /* LAYOUT */
+    /**********/
+    
+    
+
+    /* Intro Card */
+    #intro-card-content h1 {font-size:4em;}
+
+
+}
+
+@media screen and (min-width:960px) {
+
+    /* Universal Measure */
+    .measure {width:50%;}
+
+    /* Header */
+    #header {text-align:left;}
+    #header-content {}
+    #header-logo {float:left;}
+    #header-links {text-align:right; width:50%; float:right; overflow:hidden;}
+    #header-links li {margin:0 0 0 2em;}
+    #header-links li a {color:#fff; text-decoration:none;}
+    #header-login {float:right;}
+    #header-login li {width:auto; margin:0 0 0 .5em; display:inline-block;}
+    #header-login input {margin:0;}
+
+}
+
+
+@media screen and (min-width:1200px) {
+
+    /* Header */
+    #header {text-align:left;}
+    #header-content {}
+    #header-logo {width:auto; float:left;}
+
+    #header-links {text-align:right; width:50%; float:right; overflow:hidden;}
+    #header-links li {margin:0 0 0 2em;}
+    #header-links li a {color:#fff; text-decoration:none;}
+    
+    #header-login {width:auto;  float:right;}
+    #header-login li {width:auto; margin:0 0 0 .5em; display:inline-block;}
+    #header-login input {margin:0;}
+
+}
