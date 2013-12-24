@@ -281,22 +281,27 @@ input {
  {
   -webkit-transition: all linear 0.2s;
   transition: all linear 0.2s;
+  position: absolute;
 }
 
 .slide.ng-enter {
   opacity: 0;
+  left: 100px;
 }
 
 .slide.ng-enter-active {
   opacity: 1;
+  left: 0px;
 }
 
 .slide.ng-leave {
   opacity: 1;
+  left: 0px;
 }
 
 .slide.ng-leave-active {
   opacity: 0;
+  left: 100px;
 }
 
 /*****************/
@@ -327,7 +332,7 @@ input {
   /* Universal Measure */
 
   .measure {
-    width: 50%;
+    width: 60%;
   }
 
   /* Header */
