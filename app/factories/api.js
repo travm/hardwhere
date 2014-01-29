@@ -1,5 +1,7 @@
 hardwhere.factory('apiFactory', function($resource){
     
+    // http://api.dribbble.com/shots/21603
+
     // var assets = [
     //     { "id": 1, "AssetTypeId": 1, "Properties": [{"name": "Macbook Pro"}, {"desc": "2013 Apple Macbook Pro"}]},
     //     { "id": 1, "AssetTypeId": 2, "Properties": [{"name": "Macbook Pro"}, {"desc": "2013 Apple Macbook Pro"}]},
@@ -11,35 +13,8 @@ hardwhere.factory('apiFactory', function($resource){
 
     factory.getAssets = function() {
 
-        // AJAX Call?
+        // Figure Out How To Communicate With API!
 
-        // $.ajax({
-        //     url: "http://assmanapi.azurewebsites.net/api/assettype/",
-        //     headers: {
-        //         "Authorization": "Basic " + btoa("kent" + ":" + "iheartacos")
-        //     },
-        //     type: "Get",
-
-        // });
-
-        var assetManager = $resource('http://assmanapi.azurewebsites.net/api/goodasset');
-        var assets = assetManager.query({}, function() { console.log(assets);});
-        console.log(assets);
-        return assets;
-
-        // $http({
-        //     url: "http://assmanapi.azurewebsites.net/api/asset",
-        //     method: "GET",
-        //     data: {"foo":"bar"}
-        // }).success(function(data, status, headers, config) {
-        //     assets = data;
-        //     //console.log(assets);
-        //     return assets;
-
-        // }).error(function(data, status, headers, config) {
-        //     status = status;
-        //     console.log(status);
-        // });
     };
 
     factory.postAsset = function(asset) {

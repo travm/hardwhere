@@ -17,16 +17,10 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('dist'));
 });
 
-// Default Task
-gulp.task('default', function(){
-    gulp.run('styles', 'scripts');
-
-    // Watch For Changes To Our JS
-    gulp.watch('./app/assets/css/*.css', function(){
-        gulp.run('styles');
-    });
-
-    gulp.watch('./app/**/*.js', function() {
-        gulp.run('scripts');
-    });
+gulp.task('watch', function(){
+    gulp.watch('./app/assets/css/*.css', ['styles']);
+    gulp.watch('./app/**/*.js', ['scripts']);
 });
+
+// Default Task
+gulp.task('default', ['styles', 'scripts', 'watch']);

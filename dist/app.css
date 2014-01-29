@@ -160,6 +160,8 @@ input {
   padding: 4em;
   background: #fff;
   border-radius: 5px;
+  overflow: hidden;
+  display: block;
 }
 
 /* Section Block */
@@ -276,32 +278,31 @@ input {
 
 /*****************/
 
-.slide.ng-enter,
-.slide.ng-enter,
- {
-  -webkit-transition: all linear 0.2s;
-  transition: all linear 0.2s;
-  position: absolute;
+.slide-test {
+  display: block;
 }
 
-.slide.ng-enter {
+.slide-test.ng-enter,
+.slide-test.ng-leave {
+  -webkit-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+  position: relative;
+}
+
+.slide-test.ng-enter {
   opacity: 0;
-  left: 100px;
 }
 
-.slide.ng-enter-active {
+.slide-test.ng-enter.ng-enter-active {
   opacity: 1;
-  left: 0px;
 }
 
-.slide.ng-leave {
+.slide-test.ng-leave {
   opacity: 1;
-  left: 0px;
 }
 
-.slide.ng-leave-active {
+.slide-test.ng-leave.ng-leave-active {
   opacity: 0;
-  left: 100px;
 }
 
 /*****************/

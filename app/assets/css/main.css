@@ -57,7 +57,7 @@ input {width:100%; padding:.5em; border:1px solid #eee; border-radius:3px; box-s
 /***********/
 
 /* Box */
-.box {padding:4em; background:#fff; border-radius:5px;}
+.box {padding:4em; background:#fff; border-radius:5px; overflow:hidden; display:block;}
 
 /* Section Block */
 .block {margin:0 0 2em 0;}
@@ -102,16 +102,21 @@ input {width:100%; padding:.5em; border:1px solid #eee; border-radius:3px; box-s
 /*****************/
 /* NG ANIMATIONS */
 /*****************/
+.slide-test {display:block;}
 
-.slide.ng-enter, .slide.ng-enter, {
-    transition: all linear 0.2s;
-    position:absolute;
+.slide-test.ng-enter, .slide-test.ng-leave {
+    -webkit-transition: 0.2s linear all;
+    -moz-transition: 0.2s linear all;
+    -ms-transition: 0.2s linear all;
+    -o-transition: 0.2s linear all;
+    transition: 0.2s linear all;
+    position:relative;
 }
 
-.slide.ng-enter {opacity:0; left:100px;}
-.slide.ng-enter-active {opacity:1; left:0px;}
-.slide.ng-leave {opacity:1; left:0px;}
-.slide.ng-leave-active {opacity:0; left:100px;}
+.slide-test.ng-enter {opacity:0;}
+.slide-test.ng-enter.ng-enter-active {opacity:1; }
+.slide-test.ng-leave {opacity:1;}
+.slide-test.ng-leave.ng-leave-active {opacity:0;}
 
 
 /*****************/
