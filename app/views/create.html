@@ -1,0 +1,25 @@
+<div id="core">
+    
+    <div id="core-content" class="measure">
+       
+        <h1 id="core-title">Create Asset</h1>
+        <div class="box">
+            <form action="http://hardwhere-api.azurewebsites.net/api/asset" method="post">
+            
+                
+                <input name="Id" type="hidden" value="{{ properties.Id }}" />
+                <input name="AssetTypeId" type="hidden" value="{{ properties.AssetTypeId }}" />
+
+                <div ng-repeat="(key, value) in FilterProps(properties)">
+                    <label>{{ key }}</label>
+                    <div ng-repeat="(propKey, propValue) in value">
+                        <input name="{{ key }}" ng-if="propKey == 'Value'" type="text">{{ propValue.Value }}</input>
+                    </div>
+                </div>
+                <button class="button" type="submit">Save</button>
+            </form>
+        </div>
+
+    </div>
+
+</div>

@@ -1,25 +1,9 @@
-hardwhere.controller('DashboardController', function($scope, apiFactory) {
+hardwhere.controller('DashboardController', function($scope, $routeParams, apiFactory) {
 
     // http://assmanapi.azurewebsites.net/api/assettype
     // http://api.dribbble.com/shots/21603
 
     $scope.assets = apiFactory.getAssets();
-
-    $scope.addAsset = function() {
-        $scope.assets.push({
-            name: $scope.newAsset.name,
-            desc: $scope.newAsset.desc,
-            serial: $scope.newAsset.serial
-        });
-    }
-
-    $scope.editAsset = function() {
-        $scope.assets.push({
-            name: $scope.editAsset.name,
-            desc: $scope.editAsset.desc,
-            serial: $scope.editAsset.serial
-        });
-    }
 
     $scope.deleteAsset = function(id) {
         console.log(id);
@@ -27,4 +11,5 @@ hardwhere.controller('DashboardController', function($scope, apiFactory) {
             Id: id
         });
     }
+
 });

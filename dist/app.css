@@ -164,7 +164,7 @@ input {
   padding: 2em;
   background: #fff;
   border-radius: 5px;
-  overflow: hidden;
+  overflow: auto;
   display: block;
 }
 
@@ -174,11 +174,28 @@ input {
   margin: 0 0 2em 0;
 }
 
-.block-title {
-  font-size: 1em;
+.block-header {
   margin: 0 0 2em 0;
   padding: 0 0 .5em 0;
   border-bottom: 1px solid #333;
+  overflow: hidden;
+}
+
+.block-title {
+  font-size: 1em;
+  margin: 0;
+  float: left;
+}
+
+.block-control {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.block-control li {
+  display: inline-block;
+  float: right;
 }
 
 .block-list {
@@ -205,8 +222,18 @@ input {
   border-bottom: 1px solid #eee;
 }
 
+.block-table th {
+  text-align: left;
+  padding: 1em;
+  font-weight: 700;
+}
+
 .block-table td {
   padding: 1em;
+}
+
+.block-table a {
+  color: #333;
 }
 
 /* Item Card */
@@ -255,6 +282,23 @@ input {
 
 
 
+
+/* Link Chain */
+
+.link-chain {
+  list-style: none;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.link-chain li {
+  display: inline-block;
+}
+
+.link-chain li a {
+  color: #fff;
+  text-decoration: none;
+}
 
 /* Button */
 

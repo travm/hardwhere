@@ -3,76 +3,26 @@
     <div id="core-content" class="measure">
        
         <h1 id="core-title">Dashboard</h1>
-        
-        <div class="block box">
-            
-            <h2 class="block-title"><i class="fa fa-plus-circle"></i> Add An Asset</h2>
-
-            <ul class="block-list">
-                <li>
-                    <a href="">
-                        <span class="item-card">
-                            <span class="item-card-icon">
-                                <i class="fa fa-desktop"></i>
-                            </span>
-                            <span class="item-card-text">Desktop</span>
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span class="item-card">
-                            <span class="item-card-icon">
-                                <i class="fa fa-laptop"></i>
-                            </span>
-                            <span class="item-card-text">Laptop</span>
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span class="item-card">
-                            <span class="item-card-icon">
-                                <i class="fa fa-upload"></i>
-                            </span>
-                            <span class="item-card-text">Server</span>
-                        </span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="">
-                        <span class="item-card">
-                            <span class="item-card-icon">
-                                <i class="fa fa-book"></i>
-                            </span>
-                            <span class="item-card-text">Books</span>
-                        </span>
-                    </a>
-                </li>
-            </ul>
-
-        </div>
 
         <div class="block box">
             
-            <h2 class="block-title"><i class="fa fa-list-alt"></i> Asset List</h2>
-            
+            <div class="block-header">
+                <h2 class="block-title"><i class="fa fa-list-alt"></i> Asset List</h2>
+                <ul class="block-control">
+                    <li><a href="#/dashboard/add"> Add Asset</a></li>
+                </ul>
+            </div>
 
             <table class="block-table">
+                <tr>
+                    <th ng-repeat="(key, value) in assets[0]">{{ key }}</th>
+                    <th>Details</th>
+                </tr>
                 <tr ng-repeat="asset in assets">
-                    <td>{{ asset.Name }}</td>
-                    <td>{{ asset.Description }}</td>
-                    <td>{{ asset.SerialNumber }}</td>
-                    <td>{{ asset.Location }}</td>
-                    <td>
-                        <a href="#" ng-click="editAsset()">Edit</a>
-                        <a href="#" ng-click="deleteAsset()">Delete</a>
-                    </td>
+                    <td ng-repeat="(key, value) in asset">{{ value }}</td>
+                    <td><a href="#/dashboard/details/{{ asset.Id }}"><i class="fa fa-bars"></i></td>
                 </tr>
             </table>
-
-            
 
         </div>
 

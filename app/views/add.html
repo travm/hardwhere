@@ -1,0 +1,43 @@
+<div id="core">
+    
+    <div id="core-content" class="measure">
+       
+        <h1 id="core-title">Add Asset</h1>
+        <div class="box">
+            <form action="">
+                
+                <div class="block-header">
+                    <h2 class="block-title"><i class="fa fa-plus-circle"></i> Add An Asset</h2>
+                </div>
+                
+                <ul class="block-list">
+
+                    <li ng-repeat="type in types">
+                        <a href="#/dashboard/add/{{ type.Id }}">
+                            <span class="item-card">
+                                <span class="item-card-icon">
+                                    <i class="fa {{ type.IconName }}"></i>
+                                </span>
+                                <span class="item-card-text">{{ type.Name }}</span>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="">
+                            <span class="item-card">
+                                <span class="item-card-icon">
+                                    <i class="fa fa-plus"></i>
+                                </span>
+                                <span class="item-card-text">New Type</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+        
+            </form>
+        </div>
+
+    </div>
+
+</div>
