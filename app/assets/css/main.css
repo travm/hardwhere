@@ -47,6 +47,7 @@ input {width:100%; padding:.5em; border:1px solid #eee; border-radius:3px; box-s
 
 #core {}
 #core-content {margin:2em auto; overflow:hidden;}
+#core-content h1 {margin-top:0;}
 #core-title {color:#fff;}
 
 #footer {color:#fff; background:#222; overflow:hidden;}
@@ -57,11 +58,11 @@ input {width:100%; padding:.5em; border:1px solid #eee; border-radius:3px; box-s
 /***********/
 
 /* Box */
-.box {padding:4em; background:#fff; border-radius:5px; overflow:hidden; display:block;}
+.box {padding:2em; background:#fff; border-radius:5px; overflow:hidden; display:block;}
 
 /* Section Block */
 .block {margin:0 0 2em 0;}
-.block-title {font-size:1em; margin:0 0 2em 0; padding:.5em 0; border-bottom:1px solid #333;}
+.block-title {font-size:1em; margin:0 0 2em 0; padding:0 0 .5em 0; border-bottom:1px solid #333;}
 .block-list {text-align:center; list-style:none; margin:0; padding:0;}
 .block-list li {display:inline-block;}
 .block-list li  a {color:#333; text-decoration:none;}
@@ -70,8 +71,8 @@ input {width:100%; padding:.5em; border:1px solid #eee; border-radius:3px; box-s
 .block-table td {padding:1em;}
 
 /* Item Card */
-.item-card {color:#fff; text-align:center; text-shadow:1px 1px 1px rgba(0,0,0,0.5); margin:1em;padding:1em; background:var(blue); border-radius:5px;  display:block;}
-.item-card-icon {font-size:5em; width:100%; display:block;}
+.item-card {color:#fff; text-align:center; text-shadow:1px 1px 1px rgba(0,0,0,0.5); margin:.5em; padding:.5em 1em; background:var(blue); border-radius:5px;  display:block;}
+.item-card-icon {font-size:2em; width:100%; display:block;}
 .item-card-text {width:100%;}
 
 /* Item List */
