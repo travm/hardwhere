@@ -27,7 +27,7 @@ input {width:100%; padding:.5em; border:1px solid #eee; border-radius:3px; box-s
 #header-logo {width:100%; text-align:center;}
 #header-logo i {color:var(blue);}
 #header-logo h1 a {color:#fff; text-decoration:none;}
-#header-links {list-style:none; margin:2em 0; padding:0;}
+#header-links {text-align:center; list-style:none; margin:2em 0; padding:0;}
 #header-links li {margin:0 1em; display:inline-block;}
 #header-links li a {color:#fff; text-decoration:none;}
 #header-login {text-align:center; width:100%; list-style:none; margin:1em 0; padding:0;}
@@ -98,7 +98,7 @@ input {width:100%; padding:.5em; border:1px solid #eee; border-radius:3px; box-s
 .button {
     color:#fff; 
     text-decoration:none; 
-    padding:1em; 
+    padding:.5em 1em; 
     background:var(blue);
     box-shadow:0px 3px 0px color(var(blue) shade(20%));
     border:none;
@@ -157,8 +157,8 @@ input {width:100%; padding:.5em; border:1px solid #eee; border-radius:3px; box-s
     #header {text-align:left;}
     #header-content {}
     #header-logo {float:left;}
-    #header-links {text-align:right; width:50%; float:right; overflow:hidden;}
-    #header-links li {margin:0 0 0 2em;}
+    #header-links {}
+    #header-links li {}
     #header-links li a {color:#fff; text-decoration:none;}
     #header-login {float:right;}
     #header-login li {width:auto; margin:0 0 0 .5em; display:inline-block;}
